@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>GTA Vehicles</title>
+</head>
+<body>
+<h1>GTA Vehicle List</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Owner ID</th>
+        <th>Type</th>
+        <th>Brand</th>
+        <th>Speed</th>
+        <th>Stolen</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="vehicle : ${vehicles}">
+        <td th:text="${vehicle.vehicleId}"></td>
+        <td th:text="${vehicle.ownerId}"></td>
+        <td th:text="${vehicle.type}"></td>
+        <td th:text="${vehicle.brand}"></td>
+        <td th:text="${vehicle.speed}"></td>
+        <td th:text="${vehicle.isStolen}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

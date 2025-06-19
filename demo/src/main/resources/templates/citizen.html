@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Citizen Details - GTA</title>
+  <meta charset="UTF-8">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 50%;
+      margin: 30px auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+      width: 30%;
+    }
+    h1 {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+<h1>Citizen Details</h1>
+<table>
+  <tr>
+    <th>Citizen ID</th>
+    <td th:text="${citizen.citizenId}">1</td>
+  </tr>
+  <tr>
+    <th>Name</th>
+    <td th:text="${citizen.name}">100</td>
+  </tr>
+  <tr>
+    <th>Alias</th>
+    <td th:text="${citizen.alias}">Car</td>
+  </tr>
+  <tr>
+    <th>Age</th>
+    <td th:text="${citizen.age}">Dewbauchee</td>
+  </tr>
+  <tr>
+    <th>Profession</th>
+    <td th:text="${citizen.profession}">220</td>
+  </tr>
+  <tr>
+    <th>Wanted Level</th>
+    <td th:text="${citizen.wantedLevel}">1</td>
+  </tr>
+</table>
+</body>
+</html>
